@@ -1,0 +1,53 @@
+@use '../../_config.scss' as *;
+
+#main_home{
+    article{
+        display: flex;
+        flex-wrap: wrap; // Para quebrar linha
+        justify-content: center;
+        .container_categoria_item{
+            width: calc(50% - 10px);
+            margin-bottom: 20px;
+
+            img{
+                max-width: 100%;
+                height: $altura-foto;
+                width: $largura-foto;
+                object-fit: cover; // corta a imagem pra n ficar esticada
+                opacity: 1;
+            }
+            img:hover{
+                opacity: 80%;
+            }
+
+            .item_info{
+                max-width: 100%;
+                display: flex;
+                justify-content: space-between;
+
+                p{// Nome da categoria
+                    width: 60%;
+                    padding: $esp-pp;
+                    background-color: $cor-2;
+                    text-align: center;
+                    color: $cor-4;
+                    font-size: $font-tamanho-pp;
+                }
+                a{ // Botão
+                    width: 38%;
+                    background-color: $cor-1;
+                    border: none;
+                    color: $cor-4;
+                    padding: $esp-pp;
+                    text-align: center;
+                    font-size: $font-tamanho-pp;
+                    text-decoration: none;
+                }
+            }
+        }
+
+        .container_categoria_item:nth-child(2n){
+            margin-left: 20px;
+        }
+    }
+}

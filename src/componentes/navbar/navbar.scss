@@ -1,0 +1,46 @@
+@use '../../_config.scss' as *;
+
+nav{
+    width: $largura-total;
+    margin: $esp-pp auto;
+    display: flex;
+    background-color: $cor-1;
+    justify-content: space-between; // alinha horizontalmente
+    align-items: center; //alinha verticalmente
+
+    a{ // O componente Link retorna a
+        text-decoration: none;
+        color: $cor-3;
+        padding: $esp-p;
+        font-size: $font-tamanho-pp;
+    }
+
+    a:hover{
+        color: $cor-1;
+        background-color: $cor-4;
+    }
+
+    div{
+        width: 50%;
+    }
+
+    #elemento{
+        display: flex;
+        justify-content: center;
+    }
+    .barra_pesquisa{
+        position: relative; //para que a=o absolute funcione aqui 
+
+        i{
+            position: absolute; //solto em relação a barra de pesquisa
+            left: 5px;
+            top: 50%;
+            transform:translateY(-50%); //Arrasta
+        }
+        input{
+            padding: 15px;
+            padding-left: 30px;
+            outline: none;
+        }
+    }
+}

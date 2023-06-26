@@ -1,0 +1,52 @@
+// sccs é o css com algumas melhorias
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+// VARIÁVEIS
+$fonte-1: 'Lora', sans-serif;
+$fonte-2: 'Roboto Slab', cursive;
+
+$font-tamanho-xgplus: 12.5rem; // 200
+$font-tamanho-xxgg: 8rem; // 128
+$font-tamanho-xxg: 6rem; // 96
+$font-tamanho-xg: 4.5rem; // 72
+$font-tamanho-g: 3rem; // 48 
+$font-tamanho-m: 2rem; // 32
+$font-tamanho-p: 1.5rem; // 24
+$font-tamanho-pp: 1.3rem; 
+$font-tamanho-xpp: 1rem; // 16
+
+$cor-1: #1E1E1E;
+$cor-2: #176B87;
+$cor-3: #F0F0F0;
+$cor-4: #ffffff;
+
+$esp-xxg: 15%;
+$esp-xg: 12%;
+$esp-g: 8%;
+$esp-m: 5%;
+$esp-p: 3%;
+$esp-pp: 1.5%;
+
+$largura-total: 1200px;
+$altura-foto: 380px;
+$largura-foto: 100%;
+
+// CONF PARA TDS AS PAGINAS
+main{
+    margin: auto;
+    width: $largura-total;
+
+    transform:translateY(10%); //aonde começa em relação a y
+    opacity: 0;
+    animation: show 0.3s forwards; //nome da animação, tempo de duração, permanece no estdo final
+}
+
+@keyframes show{
+    100%{
+        opacity: 1;
+        transform:translateY(0%);
+    }
+}
