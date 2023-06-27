@@ -38,4 +38,23 @@ main {
   content: " ";
   top: 50%;
   transform: translateY(-50%);
+}
+.resumo_categorias .ver_mais {
+  background-color: #1E1E1E;
+  text-align: center;
+  width: 20%;
+  height: 40px;
+  margin: auto;
+  padding-block: 8px;
+}
+.resumo_categorias .ver_mais a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1.3rem;
+}
+.resumo_categorias .ver_mais:hover {
+  background-color: #F0F0F0;
+}
+.resumo_categorias .ver_mais:hover a {
+  color: #1E1E1E;
 }/*# sourceMappingURL=resumoCategoria.css.map */

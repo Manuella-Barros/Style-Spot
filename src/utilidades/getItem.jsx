@@ -1,7 +1,7 @@
 import React from "react";
 
-async function getItem(categoria){
-    const response = await fetch(`https://dummyjson.com/products/category/${categoria}?limit=3`)
+async function getItem(categoria, limite = 3){
+    const response = await fetch(`https://dummyjson.com/products/category/${categoria}?limit=${limite}`)
     const itens = await response.json();
     //console.log(itens);
     //console.log(categoria);

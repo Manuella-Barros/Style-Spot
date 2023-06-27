@@ -83,6 +83,11 @@ main {
   width: 100%;
   text-decoration: none;
   display: block;
+  font-size: 1.3rem;
+}
+.container_produto .container_produto_item .detalhes_produto:hover {
+  background-color: #F0F0F0;
+  color: #1E1E1E;
 }
 .container_produto .container_produto_item:nth-child(2) {
   margin-left: 20px;

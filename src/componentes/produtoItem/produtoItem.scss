@@ -64,6 +64,11 @@
             width: $largura-foto;
             text-decoration: none;
             display: block; //pega espaço disponivel no container
+            font-size: $font-tamanho-pp;
+        }
+        .detalhes_produto:hover{
+            background-color: $cor-3;
+            color: $cor-1;
         }
     }    
     .container_produto_item:nth-child(2){

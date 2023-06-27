@@ -23,4 +23,24 @@
         top: 50%; //pra centralizar verticalmente
         transform: translateY(-50%); //pra centralizar verticalmente
     }
+
+    .ver_mais{
+        background-color: $cor-1;
+        text-align: center;
+        width: 20%;
+        height: 40px;
+        margin: auto;
+        padding-block: 8px;
+        a{
+            text-decoration: none;
+            color: $cor-4;
+            font-size: $font-tamanho-pp; 
+        }
+    }
+    .ver_mais:hover{
+        background-color: $cor-3;
+        a{
+            color: $cor-1;
+        }
+    }
 }

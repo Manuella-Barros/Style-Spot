@@ -4,48 +4,36 @@ import './resumoCategoria.css';
 import getItem from "../../utilidades/getItem";
 import { Link } from "react-router-dom";
 
-const categorias = [
-    "Roupas Femininas", "Joias Femininas", "Relógios", "Sapatos"
-]
+const categorias = {
+    "womens-dresses": "Roupas Femininas", 
+    "womens-jewellery": "Joias Femininas", 
+    "mens-watches": "Relógios",
+    "mens-shoes": "Sapatos"
+}
 
-function ResumoCategorias({categoria}){
+function ResumoCategorias({categoria}){ //categoria = womans-dresses
     const [produtos, setProdutos] = React.useState(null)
 
-    React.useEffect(()=>{
-        getItem(categoria)
-        .then((resposta) => {
+    React.useEffect(()=>{ getItem(categoria).then((resposta) => {
             setProdutos(resposta)
         })
     }, []);
-
-    let categoriaPTBR;
-    switch(categoria){
-        case "womens-dresses":
-            categoriaPTBR = "Roupas Femininas";
-            break
-        case "womens-jewellery":
-            categoriaPTBR = "Joias Femininas";
-            break
-        case "mens-watches":
-            categoriaPTBR = "Relógios";
-            break
-        case "mens-shoes":
-            categoriaPTBR = "Sapatos";
-            break
-    }
-
+   
     return produtos !== null ?(
         <div className="resumo_categorias">
             <div className="container_titulo">
-                <h2>{categoriaPTBR}</h2>                
+                <h2>{categorias[categoria]}</h2>                
             </div>
 
             <section className="container_produto">
-                {produtos.map((produto) => {
-                    return <ProdutoItem dados={produto}/>
+                {produtos.map((produto, i) => {
+                    return <ProdutoItem key={i} dados={produto}/>
                 })}          
             </section>
-            <Link to = {`/produtos/${categoria}`}>Ver mais</Link>
+            <div className="ver_mais">
+                <Link to = {`/produtos/${categoria}`}>Ver mais</Link>
+            </div>
+            
         </div>
     ) : 'cade os produtossss'
 }
