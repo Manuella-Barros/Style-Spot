@@ -1,6 +1,7 @@
 import React from "react";
 import CategoriaItem from "./categoriaItem";
 import ProdutoItem from "../../componentes/produtoItem/produtoItem";
+import ResumoCategorias from "../../componentes/resumoCategoria/resumoCategoria";
 import './home.css';
 
 // Um array de objetos
@@ -24,10 +25,11 @@ function Home(){
                     })
                 }
             </article>
-            <section className="container_produto">
-                <ProdutoItem/>
-                <ProdutoItem/>
-                <ProdutoItem/>
+            <section>
+                <ResumoCategorias categoria = {"womens-dresses"}/>
+                <ResumoCategorias categoria = {"womens-jewellery"}/>
+                <ResumoCategorias categoria = {"mens-watches"}/>
+                <ResumoCategorias categoria = {"mens-shoes"}/>
             </section>
         </main>
     );

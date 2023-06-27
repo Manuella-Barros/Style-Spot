@@ -1,0 +1,26 @@
+@use '../../_config.scss' as *;
+
+.resumo_categorias{
+    h2{
+        font-size: $font-tamanho-m;
+        padding-bottom: $esp-pp;
+        background-color: white;
+        display: inline; // pra pegar so o tamanho dele e n a div td
+        padding-right: 15px;
+    }
+
+    .container_titulo{
+        position: relative;
+        margin-block: 20px; // pra top e bottom, inline é para os lados
+    }
+    .container_titulo::before{
+        z-index: -1;
+        position: absolute;
+        background-color: $cor-3;
+        width: 100%;
+        height: 5px;
+        content: " ";
+        top: 50%; //pra centralizar verticalmente
+        transform: translateY(-50%); //pra centralizar verticalmente
+    }
+}

@@ -19,7 +19,7 @@ function Navbar(){
             </div>
             <div className="barra_pesquisa">
                 <input type="search" name="" id="" placeholder="Pesquise o produto"/>
-                <i class="fa-solid fa-magnifying-glass"></i>
+                <i className="fa-solid fa-magnifying-glass"></i>
             </div>
         </nav>
     );

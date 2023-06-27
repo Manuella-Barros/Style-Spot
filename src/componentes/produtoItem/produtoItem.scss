@@ -8,6 +8,8 @@
 
         .container_img{
             position: relative;
+            overflow: hidden !important; // td que sair esta oculto
+            display: block;
 
             span{
                 background-color: $cor-4;
@@ -19,18 +21,21 @@
                 text-align: center;
                 border-radius: 8px 0px 0px 0px;
             }
+            img{
+                max-width: 100%;
+                width: $largura-foto;
+                height: $altura-foto;
+                object-fit: cover;
+                object-position: top; // diz aonde não pode cortar
+                opacity: 1;
+                cursor: pointer;
+            }
+            img:hover{
+                opacity: 90%;
+                transform: scale(1.1);
+            }            
         }
-        img{
-            max-width: 100%;
-            width: $largura-foto;
-            height: $altura-foto;
-            object-fit: cover;
-            object-position: top; // diz aonde não pode cortar
-            opacity: 1;
-        }
-        img:hover{
-            opacity: 90%;
-        }
+        
         .info_produto{
             display: flex;
             justify-content: space-between;

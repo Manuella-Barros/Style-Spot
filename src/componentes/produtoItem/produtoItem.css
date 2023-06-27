@@ -27,6 +27,8 @@ main {
 }
 .container_produto .container_produto_item .container_img {
   position: relative;
+  overflow: hidden !important;
+  display: block;
 }
 .container_produto .container_produto_item .container_img span {
   background-color: #ffffff;
@@ -38,7 +40,7 @@ main {
   text-align: center;
   border-radius: 8px 0px 0px 0px;
 }
-.container_produto .container_produto_item img {
+.container_produto .container_produto_item .container_img img {
   max-width: 100%;
   width: 100%;
   height: 380px;
@@ -47,9 +49,11 @@ main {
   -o-object-position: top;
      object-position: top;
   opacity: 1;
+  cursor: pointer;
 }
-.container_produto .container_produto_item img:hover {
+.container_produto .container_produto_item .container_img img:hover {
   opacity: 90%;
+  transform: scale(1.1);
 }
 .container_produto .container_produto_item .info_produto {
   display: flex;
