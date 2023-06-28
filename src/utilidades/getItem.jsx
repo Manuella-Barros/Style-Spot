@@ -1,20 +1,29 @@
-import React from "react";
+async function getItems(categoria, limite = 3){
 
-async function getItem(categoria, limite = 3){
-    const response = await fetch(`https://dummyjson.com/products/category/${categoria}?limit=${limite}`)
-    const itens = await response.json();
-    //console.log(itens);
-    //console.log(categoria);
-    return itens.products;
+    const categorias = {
+        'womens-jewellery': 'jewelery',
+        'womens-dresses': 'women\'s clothing',
+    }
+
+    // https://fakestoreapi.com/products/category/jeweleryz
+    const queryAPI01= `https://dummyjson.com/products/category/${categoria}?limit=${limite}`
+    const respostaAPI01 = await fetch(queryAPI01)
+    const itensAPI01 = await respostaAPI01.json()
+
+    if(categoria === 'womens-jewellery' || categoria === 'womens-dresses' )
+    {
+        const queryAPI02= `https://fakestoreapi.com/products/category/${categorias[categoria]}?limit=${limite}`
+        const respostaAPI02 = await fetch(queryAPI02)
+        const itensAPI02 = await respostaAPI02.json()
+
+        for ( let [i, produto] of itensAPI01.products.entries()) {
+            produto.images.unshift(itensAPI02[i].image)
+        }
+
+        return itensAPI01.products
+    }
+
+    return itensAPI01.products
 }
 
-/*
-//async = assincrona  // await = espere  //só é chamada depois que o fetch ta pronto
-async function getItem({categoria}){
-    fetch(`https://dummyjson.com/products/category/${categoria}?limit=3`) //usou query string para limitar a 3 componente
-    //O fetch retorna uma promise pois é uma requisição, demora um pouco pra devolver a informação
-    .then(res => res.json()) // A requisição devolve json, e para impedir isso coloca .json, ai devolverá como objeto
-    .then((resposta) => console.log(resposta));//then => seguir o codigo só depois de receber a resposta do fetch
-}
-*/
-export default getItem;
+export default getItems
