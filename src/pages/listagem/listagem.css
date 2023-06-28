@@ -1,0 +1,46 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+main {
+  margin: auto;
+  width: 1200px;
+  transform: translateY(10%);
+  opacity: 0;
+  animation: show 0.3s forwards;
+}
+
+@keyframes show {
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+.main_listagem .banner {
+  margin-bottom: 50px;
+}
+.main_listagem .banner img {
+  width: 1200px;
+  height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: relative;
+}
+.main_listagem .banner .filtros {
+  top: 40%;
+  position: absolute;
+  display: flex;
+  width: 40%;
+}
+.main_listagem .banner .filtros p {
+  width: 100%;
+  background-color: #1E1E1E;
+  color: #ffffff;
+  font-size: 1.5rem;
+  padding: 3%;
+}
+.main_listagem .banner .container_produto {
+  flex-wrap: wrap;
+}/*# sourceMappingURL=listagem.css.map */

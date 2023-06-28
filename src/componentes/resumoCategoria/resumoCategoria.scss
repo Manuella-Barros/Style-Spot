@@ -25,22 +25,26 @@
     }
 
     .ver_mais{
-        background-color: $cor-1;
         text-align: center;
-        width: 20%;
+        width: $largura-total;
         height: 40px;
-        margin: auto;
-        padding-block: 8px;
-        a{
+        display: block; //pega espaço disponivel no container
+        justify-content: center;
+
+        a{ // NÃO CONSIGO AUMENTAR O TAMANHO DO BOTÃO
             text-decoration: none;
+            background-color: $cor-1;
             color: $cor-4;
-            font-size: $font-tamanho-pp; 
+            padding: 10px;
+            width: 100px;
+            height: 40px;
+            font-size: $font-tamanho-pp;
+            display: inline;
         }
-    }
-    .ver_mais:hover{
-        background-color: $cor-3;
-        a{
+        a:hover{
+            background-color: $cor-3;
             color: $cor-1;
         }
     }
+
 }

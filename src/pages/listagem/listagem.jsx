@@ -2,9 +2,10 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import ProdutoItem from "../../componentes/produtoItem/produtoItem";
 import getItem from "../../utilidades/getItem";
+import './listagem.css';
 
 function Listagem(){
-    const parametros = useParams(); // como eu to pegando isso?
+    const parametros = useParams(); // Perguntar de onde eu to pegando isso e como
     const [produtos, setProdutos] = React.useState(null)
 
     React.useEffect(()=>{ getItem(parametros.categoria, 5).then((resposta) => {
@@ -13,10 +14,10 @@ function Listagem(){
     }, []);
 
     return produtos != null ? (
-        <main>
-            <div>
-                <img src="../../images/tenis.jpg" alt="" />
-                <div>
+        <main className="main_listagem">
+            <div className="banner">
+                <img src="../../images/placeholder.jpeg" alt="" />
+                <div className="filtros">
                     <p>Filtro 1</p>
                     <p>Filtro 2</p>
                     <p>Filtro 3</p>

@@ -40,21 +40,23 @@ main {
   transform: translateY(-50%);
 }
 .resumo_categorias .ver_mais {
-  background-color: #1E1E1E;
   text-align: center;
-  width: 20%;
+  width: 1200px;
   height: 40px;
-  margin: auto;
-  padding-block: 8px;
+  display: block;
+  justify-content: center;
 }
 .resumo_categorias .ver_mais a {
   text-decoration: none;
+  background-color: #1E1E1E;
   color: #ffffff;
+  padding: 10px;
+  width: 100px;
+  height: 40px;
   font-size: 1.3rem;
+  display: inline;
 }
-.resumo_categorias .ver_mais:hover {
+.resumo_categorias .ver_mais a:hover {
   background-color: #F0F0F0;
-}
-.resumo_categorias .ver_mais:hover a {
   color: #1E1E1E;
 }/*# sourceMappingURL=resumoCategoria.css.map */

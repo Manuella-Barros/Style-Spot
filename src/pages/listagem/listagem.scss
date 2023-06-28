@@ -1,0 +1,35 @@
+@use '../../config' as *;
+
+.main_listagem{
+    .banner{
+        margin-bottom: 50px;
+
+        img{
+            width: $largura-total;
+            height: 400px;
+            object-fit: cover;
+            position: relative;
+        }
+        
+        .filtros{
+            top: 40%;
+            position: absolute;
+            display: flex;
+            width: 40%;
+       
+            p{
+                width: 100%;
+                background-color: $cor-1;
+                color: $cor-4;
+                font-size: $font-tamanho-p;
+                padding: $esp-p;
+            }
+        }
+
+        .container_produto{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+    }
+}

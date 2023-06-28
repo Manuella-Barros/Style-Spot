@@ -31,11 +31,12 @@ function ResumoCategorias({categoria}){ //categoria = womans-dresses
                 })}          
             </section>
             <div className="ver_mais">
-                <Link to = {`/produtos/${categoria}`}>Ver mais</Link>
+                <Link to = {`/produtos/${categoria}`} >Ver mais</Link>
             </div>
             
+            
         </div>
-    ) : 'cade os produtossss'
+    ) : 'Carregando produtos'
 }
 
 export default ResumoCategorias;
