@@ -1,4 +1,4 @@
-async function getItems(categoria, limite = 3){
+async function getItem(categoria, limite = 3){
 
     const categorias = {
         'womens-jewellery': 'jewelery',
@@ -26,4 +26,4 @@ async function getItems(categoria, limite = 3){
     return itensAPI01.products
 }
 
-export default getItems
+export default getItem

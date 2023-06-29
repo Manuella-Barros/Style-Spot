@@ -6,7 +6,7 @@
 
 main {
   margin: auto;
-  width: 1200px;
+  width: 1100px;
   transform: translateY(10%);
   opacity: 0;
   animation: show 0.3s forwards;
@@ -20,13 +20,15 @@ main {
 }
 .container_produto_item {
   width: 30%;
+  padding-bottom: 10px;
 }
 .container_produto_item .container_img {
+  height: 380px;
   position: relative;
   overflow: hidden !important;
   display: block;
 }
-.container_produto_item .container_img span {
+.container_produto_item .container_img .preco {
   background-color: #ffffff;
   position: absolute;
   right: 0;
@@ -39,7 +41,6 @@ main {
 .container_produto_item .container_img img {
   max-width: 100%;
   width: 100%;
-  height: 380px;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: top;
@@ -54,14 +55,15 @@ main {
 .container_produto_item .info_produto {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 10px;
+  margin-block: 3%;
 }
 .container_produto_item .nome_produto, .container_produto_item .marca_categoria {
   font-family: "Roboto Slab", cursive;
+  font-size: 1rem;
   width: 50%;
   text-align: center;
-  height: 30px;
-  padding: 5px;
+  padding: 1.5%;
+  height: 60px;
 }
 .container_produto_item .nome_produto {
   background-color: #F0F0F0;

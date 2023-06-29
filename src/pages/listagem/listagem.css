@@ -6,7 +6,7 @@
 
 main {
   margin: auto;
-  width: 1200px;
+  width: 1100px;
   transform: translateY(10%);
   opacity: 0;
   animation: show 0.3s forwards;
@@ -20,16 +20,17 @@ main {
 }
 .main_listagem .banner {
   margin-bottom: 50px;
+  max-width: 100%;
 }
 .main_listagem .banner img {
-  width: 1200px;
-  height: 400px;
+  width: 1100px;
+  height: 380px;
   -o-object-fit: cover;
      object-fit: cover;
   position: relative;
 }
 .main_listagem .banner .filtros {
-  top: 40%;
+  top: 24%;
   position: absolute;
   display: flex;
   width: 40%;
@@ -41,7 +42,13 @@ main {
   font-size: 1.5rem;
   padding: 3%;
 }
+.main_listagem .banner .filtros p:hover {
+  background-color: #F0F0F0;
+  color: #1E1E1E;
+  cursor: pointer;
+}
 .main_listagem .container_produto_listagem {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }/*# sourceMappingURL=listagem.css.map */

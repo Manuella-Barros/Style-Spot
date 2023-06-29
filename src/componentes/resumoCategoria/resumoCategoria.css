@@ -6,7 +6,7 @@
 
 main {
   margin: auto;
-  width: 1200px;
+  width: 1100px;
   transform: translateY(10%);
   opacity: 0;
   animation: show 0.3s forwards;
@@ -41,7 +41,7 @@ main {
 }
 .resumo_categorias .ver_mais {
   text-align: center;
-  width: 1200px;
+  width: 1100px;
   height: 40px;
   display: block;
   justify-content: center;

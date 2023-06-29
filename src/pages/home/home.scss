@@ -8,16 +8,18 @@
         .container_categoria_item{
             width: calc(50% - 10px);
             margin-bottom: 20px;
+            overflow: hidden;
+            //background-color: red;
 
             img{
+                display: inline;
                 max-width: 100%;
                 height: $altura-foto;
                 width: $largura-foto;
                 object-fit: cover; // corta a imagem pra n ficar esticada
-                opacity: 1;
             }
             img:hover{
-                opacity: 80%;
+                //transform: scale(1.1);
             }
 
             .item_info{
@@ -28,20 +30,24 @@
                 p{// Nome da categoria
                     width: 60%;
                     padding: $esp-pp;
-                    background-color: $cor-2;
                     text-align: center;
+                    background-color: $cor-2;
                     color: $cor-4;
                     font-size: $font-tamanho-pp;
                 }
                 a{ // Botão
                     width: 38%;
-                    background-color: $cor-1;
                     border: none;
+                    background-color: $cor-1;
                     color: $cor-4;
                     padding: $esp-pp;
                     text-align: center;
                     font-size: $font-tamanho-pp;
                     text-decoration: none;
+                }
+                a:hover{
+                    background-color: $cor-3;
+                    color: $cor-1;
                 }
             }
         }

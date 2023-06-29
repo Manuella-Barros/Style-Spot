@@ -2,13 +2,15 @@
 
 .container_produto_item{
     width: 30%;
+    padding-bottom: 10px;
 
     .container_img{
+        height: $altura-foto;
         position: relative;
         overflow: hidden !important; // td que sair esta oculto
         display: block;
 
-        span{
+        .preco{
             background-color: $cor-4;
             position: absolute;
             right: 0;
@@ -21,7 +23,6 @@
         img{
             max-width: 100%;
             width: $largura-foto;
-            height: $altura-foto;
             object-fit: cover;
             object-position: top; // diz aonde não pode cortar
             opacity: 1;
@@ -36,14 +37,15 @@
     .info_produto{
         display: flex;
         justify-content: space-between;
-        margin-bottom: 10px;
+        margin-block: $esp-p;
     }
     .nome_produto, .marca_categoria{
         font-family: $fonte-2;
+        font-size: $font-tamanho-xpp;
         width: 50%;    
-        text-align: center;        
-        height: 30px;            
-        padding: 5px;
+        text-align: center;                
+        padding: $esp-pp;
+        height: 60px;
     }
     .nome_produto{
         background-color: $cor-3;
@@ -52,6 +54,7 @@
     .marca_categoria{
         background-color: $cor-4;
         color: $cor-1;
+        
     }
     .detalhes_produto{
         background-color: $cor-1;

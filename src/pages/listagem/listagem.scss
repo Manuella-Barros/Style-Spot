@@ -3,16 +3,17 @@
 .main_listagem{
     .banner{
         margin-bottom: 50px;
+        max-width: 100%;
 
         img{
             width: $largura-total;
-            height: 400px;
+            height: $altura-foto;
             object-fit: cover;
             position: relative;
         }
         
         .filtros{
-            top: 40%;
+            top: 24%;
             position: absolute;
             display: flex;
             width: 40%;
@@ -24,11 +25,17 @@
                 font-size: $font-tamanho-p;
                 padding: $esp-p;
             }
+            p:hover{
+                background-color: $cor-3;
+                color: $cor-1;
+                cursor: pointer;
+            }
         }
     }
 
     .container_produto_listagem{
         display: flex;
         flex-wrap: wrap;
+        justify-content: space-between;
     }
 }
