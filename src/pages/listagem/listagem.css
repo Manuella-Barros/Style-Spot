@@ -41,6 +41,7 @@ main {
   font-size: 1.5rem;
   padding: 3%;
 }
-.main_listagem .banner .container_produto {
+.main_listagem .container_produto_listagem {
+  display: flex;
   flex-wrap: wrap;
 }/*# sourceMappingURL=listagem.css.map */

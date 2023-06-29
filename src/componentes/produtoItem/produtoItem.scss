@@ -1,78 +1,75 @@
 @use '../../config.scss' as *;
 
-.container_produto{
-    display: flex;
-    padding-bottom: 20px;
-    .container_produto_item{
-        width: $largura-foto;
+.container_produto_item{
+    width: 30%;
 
-        .container_img{
-            position: relative;
-            overflow: hidden !important; // td que sair esta oculto
-            display: block;
+    .container_img{
+        position: relative;
+        overflow: hidden !important; // td que sair esta oculto
+        display: block;
 
-            span{
-                background-color: $cor-4;
-                position: absolute;
-                right: 0;
-                bottom: 0;
-                width: 50%;
-                padding: 10px;
-                text-align: center;
-                border-radius: 8px 0px 0px 0px;
-            }
-            img{
-                max-width: 100%;
-                width: $largura-foto;
-                height: $altura-foto;
-                object-fit: cover;
-                object-position: top; // diz aonde não pode cortar
-                opacity: 1;
-                cursor: pointer;
-            }
-            img:hover{
-                opacity: 90%;
-                transform: scale(1.1);
-            }            
-        }
-        
-        .info_produto{
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 10px;
-        }
-        .nome_produto, .marca_categoria{
-            font-family: $fonte-2;
-            width: 50%;    
-            text-align: center;        
-            height: 30px;            
-            padding: 5px;
-        }
-        .nome_produto{
-            background-color: $cor-3;
-            color: $cor-1;
-        }
-        .marca_categoria{
+        span{
             background-color: $cor-4;
-            color: $cor-1;
-        }
-        .detalhes_produto{
-            background-color: $cor-1;
-            color: $cor-4;
-            text-align: center;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 50%;
             padding: 10px;
+            text-align: center;
+            border-radius: 8px 0px 0px 0px;
+        }
+        img{
+            max-width: 100%;
             width: $largura-foto;
-            text-decoration: none;
-            display: block; //pega espaço disponivel no container
-            font-size: $font-tamanho-pp;
+            height: $altura-foto;
+            object-fit: cover;
+            object-position: top; // diz aonde não pode cortar
+            opacity: 1;
+            cursor: pointer;
         }
-        .detalhes_produto:hover{
-            background-color: $cor-3;
-            color: $cor-1;
-        }
-    }    
-    .container_produto_item:nth-child(2){
-        margin-left: 20px;
-        margin-right: 20px;
+        img:hover{
+            opacity: 90%;
+            transform: scale(1.1);
+        }            
     }
+    
+    .info_produto{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+    .nome_produto, .marca_categoria{
+        font-family: $fonte-2;
+        width: 50%;    
+        text-align: center;        
+        height: 30px;            
+        padding: 5px;
+    }
+    .nome_produto{
+        background-color: $cor-3;
+        color: $cor-1;
+    }
+    .marca_categoria{
+        background-color: $cor-4;
+        color: $cor-1;
+    }
+    .detalhes_produto{
+        background-color: $cor-1;
+        color: $cor-4;
+        text-align: center;
+        padding: 10px;
+        width: $largura-foto;
+        text-decoration: none;
+        display: block; //pega espaço disponivel no container
+        font-size: $font-tamanho-pp;
+    }
+    .detalhes_produto:hover{
+        background-color: $cor-3;
+        color: $cor-1;
+    }
+}    
+.container_produto_item:nth-child(2){
+    margin-left: 20px;
+    margin-right: 20px;
 }
+

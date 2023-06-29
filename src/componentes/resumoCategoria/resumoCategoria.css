@@ -59,4 +59,8 @@ main {
 .resumo_categorias .ver_mais a:hover {
   background-color: #F0F0F0;
   color: #1E1E1E;
+}
+.resumo_categorias .container_produto_resumo {
+  display: flex;
+  justify-content: space-between;
 }/*# sourceMappingURL=resumoCategoria.css.map */

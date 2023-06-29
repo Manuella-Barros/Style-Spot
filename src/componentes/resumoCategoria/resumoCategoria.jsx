@@ -25,16 +25,15 @@ function ResumoCategorias({categoria}){ //categoria = womans-dresses
                 <h2>{categorias[categoria]}</h2>                
             </div>
 
-            <section className="container_produto">
+            <section className="container_produto_resumo">
                 {produtos.map((produto, i) => {
-                    return <ProdutoItem key={i} dados={produto}/>
+                    return <ProdutoItem key={i} dados={produto} className="produto_item"/>
                 })}          
             </section>
+            
             <div className="ver_mais">
                 <Link to = {`/produtos/${categoria}`} >Ver mais</Link>
             </div>
-            
-            
         </div>
     ) : 'Carregando produtos'
 }

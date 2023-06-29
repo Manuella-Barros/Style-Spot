@@ -24,10 +24,10 @@ function Listagem(){
                     <p>Filtro 4</p>
                 </div>
             </div>
-            <div className="container_produto">
+            <div className="container_produto_listagem">
                 {
                     produtos.map((produto, i) => {
-                        return <ProdutoItem key={i} dados = {produto}/>
+                        return <ProdutoItem key={i} dados = {produto} className="produto_item"/>
                     })
                 }
             </div>

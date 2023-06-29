@@ -18,19 +18,15 @@ main {
     transform: translateY(0%);
   }
 }
-.container_produto {
-  display: flex;
-  padding-bottom: 20px;
+.container_produto_item {
+  width: 30%;
 }
-.container_produto .container_produto_item {
-  width: 100%;
-}
-.container_produto .container_produto_item .container_img {
+.container_produto_item .container_img {
   position: relative;
   overflow: hidden !important;
   display: block;
 }
-.container_produto .container_produto_item .container_img span {
+.container_produto_item .container_img span {
   background-color: #ffffff;
   position: absolute;
   right: 0;
@@ -40,7 +36,7 @@ main {
   text-align: center;
   border-radius: 8px 0px 0px 0px;
 }
-.container_produto .container_produto_item .container_img img {
+.container_produto_item .container_img img {
   max-width: 100%;
   width: 100%;
   height: 380px;
@@ -51,31 +47,31 @@ main {
   opacity: 1;
   cursor: pointer;
 }
-.container_produto .container_produto_item .container_img img:hover {
+.container_produto_item .container_img img:hover {
   opacity: 90%;
   transform: scale(1.1);
 }
-.container_produto .container_produto_item .info_produto {
+.container_produto_item .info_produto {
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
 }
-.container_produto .container_produto_item .nome_produto, .container_produto .container_produto_item .marca_categoria {
+.container_produto_item .nome_produto, .container_produto_item .marca_categoria {
   font-family: "Roboto Slab", cursive;
   width: 50%;
   text-align: center;
   height: 30px;
   padding: 5px;
 }
-.container_produto .container_produto_item .nome_produto {
+.container_produto_item .nome_produto {
   background-color: #F0F0F0;
   color: #1E1E1E;
 }
-.container_produto .container_produto_item .marca_categoria {
+.container_produto_item .marca_categoria {
   background-color: #ffffff;
   color: #1E1E1E;
 }
-.container_produto .container_produto_item .detalhes_produto {
+.container_produto_item .detalhes_produto {
   background-color: #1E1E1E;
   color: #ffffff;
   text-align: center;
@@ -85,11 +81,12 @@ main {
   display: block;
   font-size: 1.3rem;
 }
-.container_produto .container_produto_item .detalhes_produto:hover {
+.container_produto_item .detalhes_produto:hover {
   background-color: #F0F0F0;
   color: #1E1E1E;
 }
-.container_produto .container_produto_item:nth-child(2) {
+
+.container_produto_item:nth-child(2) {
   margin-left: 20px;
   margin-right: 20px;
 }/*# sourceMappingURL=produtoItem.css.map */

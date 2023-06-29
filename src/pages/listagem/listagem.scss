@@ -25,11 +25,10 @@
                 padding: $esp-p;
             }
         }
+    }
 
-        .container_produto{
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
+    .container_produto_listagem{
+        display: flex;
+        flex-wrap: wrap;
     }
 }
