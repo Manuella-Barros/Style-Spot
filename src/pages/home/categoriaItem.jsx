@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"; // plugging
 function CategoriaItem({valores}){ // aqui ta passando os valores das categorias
     return (
         <div className="container_categoria_item">
-            <div className="imagem">
+            <div className="container_imagem">
                 <img src={valores.imagem} alt="" />
             </div>
             <div className="item_info">

@@ -1,0 +1,60 @@
+@use '../../_config' as *;
+
+#main_produto{
+    #article_produto{
+        display: flex;
+        
+        picture{
+            width: 40%;
+            height: $altura-foto;
+
+            img{
+                height: 100%;
+                max-width: 100%;
+            }
+        }    
+        
+        section{
+            padding: $esp-pp;
+            width: 60%;
+
+            div{
+                display: flex;
+                margin-block: $esp-p;
+                width: 80%;
+                justify-content: space-between;
+
+                p{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: $cor-3;
+                    padding: 8px 8px;
+                    text-align: center;
+                    width: 33%;
+                }
+
+                #preco{
+                    background-color: $cor-2;
+                    color: $cor-4;
+                    width: 25%;
+                }
+            }
+            
+            a{
+                text-decoration: none;
+                background-color: $cor-1;
+                color: $cor-4;
+                width: 80%;
+                display: block;
+                padding: $esp-p $esp-m;
+                text-align: center;
+            }
+            a:hover{
+                background-color: $cor-3;
+                color: $cor-1;
+            }
+        }
+    }
+
+}

@@ -19,14 +19,18 @@
             padding: 10px;
             text-align: center;
             border-radius: 8px 0px 0px 0px;
+
         }
         img{
-            max-width: 100%;
             width: $largura-foto;
+            height: $altura-foto;
             object-fit: cover;
             object-position: top; // diz aonde não pode cortar
             opacity: 1;
             cursor: pointer;
+            max-width: 100%;
+            max-height: 100%;
+            display: block;            
         }
         img:hover{
             opacity: 90%;
@@ -43,9 +47,11 @@
         font-family: $fonte-2;
         font-size: $font-tamanho-xpp;
         width: 50%;    
-        text-align: center;                
         padding: $esp-pp;
         height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     .nome_produto{
         background-color: $cor-3;
@@ -61,6 +67,7 @@
         color: $cor-4;
         text-align: center;
         padding: 10px;
+        margin-bottom: $esp-m;
         width: $largura-foto;
         text-decoration: none;
         display: block; //pega espaço disponivel no container

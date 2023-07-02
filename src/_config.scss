@@ -1,9 +1,5 @@
 // sccs é o css com algumas melhorias
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
+
 // VARIÁVEIS
 $fonte-1: 'Lora', sans-serif;
 $fonte-2: 'Roboto Slab', cursive;
@@ -16,7 +12,7 @@ $font-tamanho-g: 3rem; // 48
 $font-tamanho-m: 2rem; // 32
 $font-tamanho-p: 1.5rem; // 24
 $font-tamanho-pp: 1.3rem; 
-$font-tamanho-xpp: 1rem; // 16
+$font-tamanho-xpp: 1.1rem; // 16
 
 $cor-1: #1E1E1E;
 $cor-2: #176B87;
@@ -29,6 +25,7 @@ $esp-g: 8%;
 $esp-m: 5%;
 $esp-p: 3%;
 $esp-pp: 1.5%;
+$esp-xpp: 1.2%;
 
 $largura-total: 1100px;
 $altura-foto: 380px;
@@ -49,4 +46,18 @@ main{
         opacity: 1;
         transform:translateY(0%);
     }
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: $fonte-2;
+
+    h1{
+        font-size: $font-tamanho-m;
+    }
+}
+:root{
+    font-size: 14.5px;
 }

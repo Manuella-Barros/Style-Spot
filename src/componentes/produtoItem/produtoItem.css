@@ -1,9 +1,3 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
 main {
   margin: auto;
   width: 1100px;
@@ -18,6 +12,20 @@ main {
     transform: translateY(0%);
   }
 }
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Slab", cursive;
+}
+* h1 {
+  font-size: 2rem;
+}
+
+:root {
+  font-size: 14.5px;
+}
+
 .container_produto_item {
   width: 30%;
   padding-bottom: 10px;
@@ -39,14 +47,17 @@ main {
   border-radius: 8px 0px 0px 0px;
 }
 .container_produto_item .container_img img {
-  max-width: 100%;
   width: 100%;
+  height: 380px;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: top;
      object-position: top;
   opacity: 1;
   cursor: pointer;
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
 }
 .container_produto_item .container_img img:hover {
   opacity: 90%;
@@ -59,11 +70,13 @@ main {
 }
 .container_produto_item .nome_produto, .container_produto_item .marca_categoria {
   font-family: "Roboto Slab", cursive;
-  font-size: 1rem;
+  font-size: 1.1rem;
   width: 50%;
-  text-align: center;
   padding: 1.5%;
   height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .container_produto_item .nome_produto {
   background-color: #F0F0F0;
@@ -78,6 +91,7 @@ main {
   color: #ffffff;
   text-align: center;
   padding: 10px;
+  margin-bottom: 5%;
   width: 100%;
   text-decoration: none;
   display: block;

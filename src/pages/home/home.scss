@@ -11,16 +11,22 @@
             overflow: hidden;
             //background-color: red;
 
-            img{
-                display: inline;
-                max-width: 100%;
+            .container_imagem{
+                overflow: hidden;
                 height: $altura-foto;
-                width: $largura-foto;
-                object-fit: cover; // corta a imagem pra n ficar esticada
+                margin-bottom: 20px;
+
+                img{
+                    display: inline;
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover; // corta a imagem pra n ficar esticada
+                }
+                img:hover{
+                    transform: scale(1.1);
+                }
             }
-            img:hover{
-                //transform: scale(1.1);
-            }
+
 
             .item_info{
                 max-width: 100%;

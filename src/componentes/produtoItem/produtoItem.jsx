@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import './produtoItem.css';
 
 function ProdutoItem({dados}){
+    const url = `produtos/search?idPrimario=${dados.id}&idSecundario=${dados.fakeStoreID !== "undefined" ? dados.fakestoreID : 'none'}`
     return(
         <div className="container_produto_item">
             <picture className="container_img">
@@ -13,7 +14,7 @@ function ProdutoItem({dados}){
                 <p className='nome_produto'>{dados.title}</p>
                 <p className='marca_categoria'>{dados.brand}</p>
             </div>
-            <Link className="detalhes_produto">Ver detalhes</Link>
+            <Link to={`/produtos/${dados.category}/${url}`} className="detalhes_produto">Ver detalhes</Link>
         </div>
     );
 }

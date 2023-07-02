@@ -3,6 +3,8 @@ import ProdutoItem from "../../componentes/produtoItem/produtoItem";
 import './resumoCategoria.css'; 
 import getItem from "../../utilidades/getItem";
 import { Link } from "react-router-dom";
+import '../carregando/carregando'
+import Carregando from "../carregando/carregando";
 
 const categorias = {
     "womens-dresses": "Roupas Femininas", 
@@ -35,7 +37,7 @@ function ResumoCategorias({categoria}){ //categoria = womans-dresses
                 <Link to = {`/produtos/${categoria}`} >Ver mais</Link>
             </div>
         </div>
-    ) : 'Carregando produtos'
+    ) : <Carregando/>;
 }
 
 export default ResumoCategorias;

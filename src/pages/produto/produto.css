@@ -1,0 +1,76 @@
+main {
+  margin: auto;
+  width: 1100px;
+  transform: translateY(10%);
+  opacity: 0;
+  animation: show 0.3s forwards;
+}
+
+@keyframes show {
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Slab", cursive;
+}
+* h1 {
+  font-size: 2rem;
+}
+
+:root {
+  font-size: 14.5px;
+}
+
+#main_produto #article_produto {
+  display: flex;
+}
+#main_produto #article_produto picture {
+  width: 40%;
+  height: 380px;
+}
+#main_produto #article_produto picture img {
+  height: 100%;
+  max-width: 100%;
+}
+#main_produto #article_produto section {
+  padding: 1.5%;
+  width: 60%;
+}
+#main_produto #article_produto section div {
+  display: flex;
+  margin-block: 3%;
+  width: 80%;
+  justify-content: space-between;
+}
+#main_produto #article_produto section div p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F0F0F0;
+  padding: 8px 8px;
+  text-align: center;
+  width: 33%;
+}
+#main_produto #article_produto section div #preco {
+  background-color: #176B87;
+  color: #ffffff;
+  width: 25%;
+}
+#main_produto #article_produto section a {
+  text-decoration: none;
+  background-color: #1E1E1E;
+  color: #ffffff;
+  width: 80%;
+  display: block;
+  padding: 3% 5%;
+  text-align: center;
+}
+#main_produto #article_produto section a:hover {
+  background-color: #F0F0F0;
+  color: #1E1E1E;
+}/*# sourceMappingURL=produto.css.map */

@@ -29,6 +29,7 @@ nav{
         justify-content: center;
     }
     .barra_pesquisa{
+        margin-left: $esp-m;
         position: relative; //para que a=o absolute funcione aqui 
 
         i{
