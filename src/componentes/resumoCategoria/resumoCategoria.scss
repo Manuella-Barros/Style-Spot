@@ -50,5 +50,9 @@
     .container_produto_resumo{
         display: flex;
         justify-content: space-between;
+
+        @media (max-width: 500px){
+            flex-wrap: wrap;
+        }
     }
 }

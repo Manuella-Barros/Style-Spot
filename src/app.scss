@@ -1,0 +1,39 @@
+$largura-total: min(90%, 1100px);
+$fonte-2: 'Roboto Slab', cursive;
+$font-tamanho-m: 2rem; // 32
+// CONF PARA TDS AS PAGINAS
+main{
+  margin: auto;
+  width: $largura-total;
+
+  transform:translateY(10%); //aonde começa em relação a y
+  opacity: 0;
+  animation: show 0.3s forwards; //nome da animação, tempo de duração, permanece no estdo final
+}
+
+@keyframes show{
+  100%{
+    opacity: 1;
+    transform:translateY(0%);
+  }
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: $fonte-2;
+
+  h1{
+    font-size: $font-tamanho-m;
+  }
+}
+
+
+:root{
+  font-size: 14.5px;
+
+  @media (max-width: 500px){
+    font-size: 12px;
+  }
+}

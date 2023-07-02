@@ -1,38 +1,15 @@
-main {
-  margin: auto;
-  width: 1100px;
-  transform: translateY(10%);
-  opacity: 0;
-  animation: show 0.3s forwards;
-}
-
-@keyframes show {
-  100% {
-    opacity: 1;
-    transform: translateY(0%);
-  }
-}
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: "Roboto Slab", cursive;
-}
-* h1 {
-  font-size: 2rem;
-}
-
-:root {
-  font-size: 14.5px;
-}
-
 nav {
-  width: 1100px;
+  width: min(90%, 1100px);
   margin: 1.5% auto;
   display: flex;
   background-color: #1E1E1E;
   justify-content: space-between;
   align-items: center;
+}
+@media (max-width: 500px) {
+  nav {
+    display: none;
+  }
 }
 nav a {
   text-decoration: none;
@@ -65,4 +42,6 @@ nav .barra_pesquisa input {
   padding: 15px;
   padding-left: 30px;
   outline: none;
-}/*# sourceMappingURL=navbar.css.map */
+}
+
+/*# sourceMappingURL=navbar.css.map */

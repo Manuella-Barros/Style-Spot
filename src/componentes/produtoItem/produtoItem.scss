@@ -4,6 +4,10 @@
     width: 30%;
     padding-bottom: 10px;
 
+    @media (max-width: 500px){
+        width: 100%;
+    }
+
     .container_img{
         height: $altura-foto;
         position: relative;

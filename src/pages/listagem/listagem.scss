@@ -1,6 +1,9 @@
 @use '../../config' as *;
 
 .main_listagem{
+    @media (max-width: 500px){
+        width: 100%;
+    }
     .banner{
         margin-bottom: 50px;
         max-width: 100%;
@@ -10,6 +13,10 @@
             height: $altura-foto;
             object-fit: cover;
             position: relative;
+
+            @media (max-width: 500px) {
+                width: 100%;
+            }
         }
         
         .filtros{
@@ -17,10 +24,15 @@
             position: absolute;
             display: flex;
             width: 40%;
+            background-color: $cor-1;
+
+            @media (max-width: 500px){
+                top: 11%;
+                width: 100%;
+            }
        
             p{
                 width: 100%;
-                background-color: $cor-1;
                 color: $cor-4;
                 font-size: $font-tamanho-p;
                 padding: $esp-p;

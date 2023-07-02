@@ -1,51 +1,38 @@
-main {
-  margin: auto;
-  width: 1100px;
-  transform: translateY(10%);
-  opacity: 0;
-  animation: show 0.3s forwards;
-}
-
-@keyframes show {
-  100% {
-    opacity: 1;
-    transform: translateY(0%);
+@media (max-width: 500px) {
+  .main_listagem {
+    width: 100%;
   }
 }
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: "Roboto Slab", cursive;
-}
-* h1 {
-  font-size: 2rem;
-}
-
-:root {
-  font-size: 14.5px;
-}
-
 .main_listagem .banner {
   margin-bottom: 50px;
   max-width: 100%;
 }
 .main_listagem .banner img {
-  width: 1100px;
+  width: min(90%, 1100px);
   height: 380px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   position: relative;
+}
+@media (max-width: 500px) {
+  .main_listagem .banner img {
+    width: 100%;
+  }
 }
 .main_listagem .banner .filtros {
   top: 24%;
   position: absolute;
   display: flex;
   width: 40%;
+  background-color: #1E1E1E;
+}
+@media (max-width: 500px) {
+  .main_listagem .banner .filtros {
+    top: 11%;
+    width: 100%;
+  }
 }
 .main_listagem .banner .filtros p {
   width: 100%;
-  background-color: #1E1E1E;
   color: #ffffff;
   font-size: 1.5rem;
   padding: 3%;
@@ -59,4 +46,6 @@ main {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-}/*# sourceMappingURL=listagem.css.map */
+}
+
+/*# sourceMappingURL=listagem.css.map */

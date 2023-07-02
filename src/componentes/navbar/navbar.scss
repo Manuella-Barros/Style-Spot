@@ -8,6 +8,10 @@ nav{
     justify-content: space-between; // alinha horizontalmente
     align-items: center; //alinha verticalmente
 
+    @media (max-width: 500px){
+        display: none;
+    }
+
     a{ // O componente Link retorna a
         text-decoration: none;
         color: $cor-3;

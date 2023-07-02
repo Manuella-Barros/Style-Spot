@@ -3,6 +3,10 @@
 #main_produto{
     #article_produto{
         display: flex;
+
+        @media(max-width: 500px){
+            display: block;
+        }
         
         picture{
             width: 40%;
@@ -18,11 +22,24 @@
             padding: $esp-pp;
             width: 60%;
 
+            @media(max-width: 500px){
+                width: 100%;
+
+                p{
+                    margin-block: 10px;
+                }
+            }
+
             div{
                 display: flex;
                 margin-block: $esp-p;
                 width: 80%;
                 justify-content: space-between;
+
+                @media(max-width: 500px){
+                    width: 100%;
+                    margin-block: 20px;
+                }
 
                 p{
                     display: flex;
@@ -49,6 +66,10 @@
                 display: block;
                 padding: $esp-p $esp-m;
                 text-align: center;
+
+                @media(max-width: 500px){
+                    width: 100%;
+                }
             }
             a:hover{
                 background-color: $cor-3;

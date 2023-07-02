@@ -19,7 +19,7 @@ function Listagem(){
     React.useEffect(()=>{ 
         setProdutos(null);
         getItem(parametros.categoria, 5).then((resposta) => {
-            console.log(resposta)
+
             setProdutos(resposta);
         })
     }, [parametros]);

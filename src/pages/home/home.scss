@@ -9,7 +9,10 @@
             width: calc(50% - 10px);
             margin-bottom: 20px;
             overflow: hidden;
-            //background-color: red;
+
+            @media (max-width: 500px) {
+                width: calc(100% - 10px);
+            }
 
             .container_imagem{
                 overflow: hidden;
@@ -60,6 +63,15 @@
 
         .container_categoria_item:nth-child(2n){
             margin-left: 20px;
+
+            @media (max-width: 500px) {
+                margin-left: 0px;
+            }
         }
     }
+    /*
+    .container_resumoCategoria{
+        display: flex;
+        flex-wrap: wrap;
+    }*/
 }

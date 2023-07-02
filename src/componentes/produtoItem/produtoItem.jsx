@@ -8,7 +8,7 @@ function ProdutoItem({dados}){
         <div className="container_produto_item">
             <picture className="container_img">
                 <img src={dados.images[0]} alt="" />    
-                <span className="preco">R$ {dados.price}</span>            
+                <span className="preco">R$ {dados.price}</span>
             </picture>
             <div className="info_produto">
                 <p className='nome_produto'>{dados.title}</p>
