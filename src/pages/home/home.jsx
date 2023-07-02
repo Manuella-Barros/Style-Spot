@@ -6,10 +6,10 @@ import './home.css';
 
 // Um array de objetos
 const categorias =[
-    {categoria: 'Relogios', imagem: './images/relogios.jpg', caminho:'/produtos/relogios'},
-    {categoria: 'Joias', imagem: './images/joias.jpg', caminho:'/produtos/joias'},
-    {categoria: 'Roupas', imagem: './images/roupas.jpg', caminho:'/produtos/roupas'},
-    {categoria: 'Tenis', imagem: './images/tenis.jpg', caminho:'/produtos/tenis'},
+    {categoria: 'Relogios', imagem: './images/relogios.jpg', caminho:'/produtos/mens-watches'},
+    {categoria: 'Joias', imagem: './images/joias.jpg', caminho:'/produtos/womens-jewellery'},
+    {categoria: 'Roupas', imagem: './images/roupas.jpg', caminho:'/produtos/womens-dresses'},
+    {categoria: 'Tenis', imagem: './images/tenis.jpg', caminho:'/produtos/mens-shoes'},
 ]
 
 function Home(){
