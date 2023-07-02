@@ -2,8 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom"; // plugging
 
 function CategoriaItem({valores}){ // aqui ta passando os valores das categorias
-
-    console.log(valores.categoria);
     return (
         <div className="container_categoria_item">
             <div className="container_imagem">

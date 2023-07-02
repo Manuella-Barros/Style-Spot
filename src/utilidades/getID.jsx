@@ -19,7 +19,7 @@ async function getID(search, categoria){
     const response = await fetch(query)
     const produto = await response.json()
 
-    if(search.get('idSecundario') !== 'none' && search.get('p') !== 'shoes'){
+    if(search.get('idSecundario') !== 'none' && search.get('p') !== 'shoes' && search.get('idSecundario') !== 'undefined'){
         const query2 = `https://fakestoreapi.com/products/${search.get('idSecundario')}`
         const response2 = await fetch(query2)
         const produto2 = await response2.json()
@@ -30,17 +30,14 @@ async function getID(search, categoria){
         produto.images.unshift(imgs[search.get('idSecundario')])
     }
 
-    console.log(categoria)
     const query3 = `https://fakestoreapi.com/products/category/${categorias[categoria]}`
     const response3 = await fetch(query3)
     const produto3 = await response3.json()
 
     // (max - min ) + min
     const nAleatorio = Math.round(Math.random() * (3 - 0 ) + 0)
-    console.log(nAleatorio)
 
     produto.description =  produto3[nAleatorio].description
-
 
     return produto
 }

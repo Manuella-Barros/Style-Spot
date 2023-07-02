@@ -11,8 +11,7 @@ function Produto(){
     const search = new URLSearchParams(URLInfo.search) // transforma em um objeto manipulável
 
     const [produto1, setProduto1] = useState(null);
-    //const [produto2, setProduto2] = useState(null);
-    
+
     React.useEffect(() => {
         setProduto1(null);
         getID(search, parametro.categoria).then((resposta) => {

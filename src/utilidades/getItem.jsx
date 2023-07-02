@@ -36,6 +36,7 @@ async function getItem(categoria, limite = 3){
 
         for ( let [i, produto] of itensAPI01.products.entries()) {
             produto.images.unshift(imgs[i])
+            produto.shoesID = i;
         }
     }
 
