@@ -1,43 +1,106 @@
-import React from "react";
-import { useParams } from "react-router-dom";
+import React, { useState } from "react";
+import { useParams, Link } from "react-router-dom";
 import ProdutoItem from "../../componentes/produtoItem/produtoItem";
 import getItem from "../../utilidades/getItem";
 import './listagem.css';
 import Carregando from "../../componentes/carregando/carregando.jsx";
+import Filtros from "../../componentes/filtros/filtros";
 
 const imagensBanner = {
-    'womens-dresses': '/images/list/capa/capaClothing.jpg',
-    'womens-jewellery': '/images/list/capa/capaEarring.jpg',
-    'mens-watches': '/images/list/capa/capaWatch.jpg', 
-    'mens-shoes': '/images/list/capa/capaShoes.jpg'
+    'roupas': '/images/list/capa/capaClothing.jpg',
+    'joalheria': '/images/list/capa/capaEarring.jpg',
+    'relogios': '/images/list/capa/capaWatch.jpg', 
+    'tenis': '/images/list/capa/capaShoes.jpg'
+}
+
+const nomes = {
+    'relogios': ['mens-watches', 'womens-watches'],
+    'roupas': ['womens-dresses', 'mens-shirts'],
+    'joalheria': ['womens-jewellery', 'sunglasses'],
+    'tenis': ['mens-shoes', 'womens-shoes']
+}
+
+// const filtros = [ // Informações do filtro
+//     {'roupas': ["Masculino", "Feminino", "Caro", "Barato", "mens-shirts", "womens-dresses", "", ""]},
+//     {'joalheria': ["Oculos", "Joias", "Caro", "Barato", "sunglasses", "joia", "", ""]},
+//     {'relogios': ["Masculino", "Feminino", "Caro", "Barato", "mens-watches", "womens-watches", "", ""]},
+//     {'tenis': ["Masculino", "Feminino", "Caro", "Barato", "mens-shoes", "womens-shoes", "", ""]},
+// ]
+
+async function getNome(nomes){
+    let itens = [], resposta;
+
+    for(const nome of nomes){
+        resposta = await getItem(nome);
+        itens = [...itens, ...resposta];
+    }
+    return itens;
 }
 
 function Listagem(){
+    //HOOKS
     const parametros = useParams();
-    const [produtos, setProdutos] = React.useState(null)
+    const [produtos, setProdutos] = React.useState(null);
+    const [filtro, setFiltro] = useState(null);
+    const [resPesquisa, setResPesquisa] = useState(null);
 
-    React.useEffect(()=>{ 
+    React.useEffect(() => {//Pegando o valor da api e guardando em produtos de acordo com useParams
         setProdutos(null);
-        getItem(parametros.categoria, 5).then((resposta) => {
-
+        setFiltro(null);
+        getNome(nomes[parametros.categoria]).then((resposta) => {
             setProdutos(resposta);
         })
     }, [parametros]);
 
+    if(filtro != null && filtro == "caro"){
+        produtos.sort((a, b) => {
+            return b.price - a.price
+        });
+    } 
+    if(filtro != null && filtro == "barato"){
+        produtos.sort((a, b) => {
+            return a.price - b.price
+        });
+    }
+
+    function pesquisar(e){
+        const valorInput = e.target.value;
+
+        setResPesquisa(produtos.filter(produto => {
+            if(produto.title.toLowerCase().includes(valorInput)){
+                return produto;
+            }
+        }))
+    }
+
+    // RETURN
     return produtos != null ? (
         <main className="main_listagem">
             <div className="banner">
-                <img src={imagensBanner[produtos[0].category]} alt="" />
-                <div className="filtros">
-                    <p>Filtro 1</p>
-                    <p>Filtro 2</p>
-                    <p>Filtro 3</p>
-                    <p>Filtro 4</p>
+                <img src={imagensBanner[parametros.categoria]} alt="" />
+                <div className="filtros"> 
+                    <Filtros setFiltro={setFiltro} filtro={filtro}/>
+                    <div className="barra_pesquisa">
+                        <input onChange={pesquisar} type="search" placeholder="Pesquise o produto"/>
+                        <i className="fa-solid fa-magnifying-glass"></i>
                 </div>
             </div>
-            <div className="container_produto_listagem">
+            </div>
+            <div key={1} className="container_produto_listagem">
                 {
+                    resPesquisa == null ?
                     produtos.map((produto, i) => {
+                        if(filtro != null && produto.category == filtro){
+                            return <ProdutoItem key={i} dados = {produto} className="produto_item"/>
+                        } else if(filtro != null && filtro == "caro"){
+                            return <ProdutoItem key={i} dados = {produto} className="produto_item"/>
+                        } else if(filtro != null && filtro == "barato"){
+                            return <ProdutoItem key={i} dados = {produto} className="produto_item"/>
+                        }else if(filtro == null ){
+                            return <ProdutoItem key={i} dados = {produto} className="produto_item"/>
+                        }
+                    }) :
+                    resPesquisa.map((produto, i)=>{
                         return <ProdutoItem key={i} dados = {produto} className="produto_item"/>
                     })
                 }

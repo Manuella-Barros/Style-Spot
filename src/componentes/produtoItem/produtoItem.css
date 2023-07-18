@@ -26,8 +26,10 @@
 .container_produto_item .container_img img {
   width: 100%;
   height: 380px;
-  object-fit: cover;
-  object-position: top;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
   opacity: 1;
   cursor: pointer;
   max-width: 100%;
@@ -80,6 +82,4 @@
 .container_produto_item:nth-child(2) {
   margin-left: 20px;
   margin-right: 20px;
-}
-
-/*# sourceMappingURL=produtoItem.css.map */
+}/*# sourceMappingURL=produtoItem.css.map */

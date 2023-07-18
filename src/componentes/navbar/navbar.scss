@@ -32,20 +32,4 @@ nav{
         display: flex;
         justify-content: center;
     }
-    .barra_pesquisa{
-        margin-left: $esp-m;
-        position: relative; //para que a=o absolute funcione aqui 
-
-        i{
-            position: absolute; //solto em relação a barra de pesquisa
-            left: 5px;
-            top: 50%;
-            transform:translateY(-50%); //Arrasta
-        }
-        input{
-            padding: 15px;
-            padding-left: 30px;
-            outline: none;
-        }
-    }
 }

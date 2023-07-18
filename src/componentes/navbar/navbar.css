@@ -27,21 +27,4 @@ nav div {
 nav #elemento {
   display: flex;
   justify-content: center;
-}
-nav .barra_pesquisa {
-  margin-left: 5%;
-  position: relative;
-}
-nav .barra_pesquisa i {
-  position: absolute;
-  left: 5px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-nav .barra_pesquisa input {
-  padding: 15px;
-  padding-left: 30px;
-  outline: none;
-}
-
-/*# sourceMappingURL=navbar.css.map */
+}/*# sourceMappingURL=navbar.css.map */

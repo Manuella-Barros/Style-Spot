@@ -3,14 +3,15 @@ import { Link } from "react-router-dom";
 import './produtoItem.css';
 
 function ProdutoItem({dados}){
-    let url = `produtos/search?idPrimario=${dados.id}`
+    let url = `search?idPrimario=${dados.id}`
 
     if(dados.shoesID !== undefined){
         url += `&idSecundario=${dados.shoesID}&p=shoes`;
-    } else{
+    } else if(dados?.fakestoreID){
         url += `&idSecundario=${dados.fakestoreID}`
+    } else{
+        url += `&idSecundario=none`
     }
-    //url += `produtos/search?idPrimario=${dados.id}&idSecundario=${dados.fakeStoreID !== "undefined" ? dados.fakestoreID : 'none'}`
 
     return(
         <div className="container_produto_item">

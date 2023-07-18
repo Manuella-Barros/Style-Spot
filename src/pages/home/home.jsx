@@ -3,14 +3,7 @@ import CategoriaItem from "./categoriaItem";
 import ProdutoItem from "../../componentes/produtoItem/produtoItem";
 import ResumoCategorias from "../../componentes/resumoCategoria/resumoCategoria";
 import './home.css';
-
-// Um array de objetos
-const categorias =[
-    {categoria: 'Relogios', imagem: './images/relogios.jpg', caminho:'/produtos/mens-watches'},
-    {categoria: 'Joias', imagem: './images/joias.jpg', caminho:'/produtos/womens-jewellery'},
-    {categoria: 'Roupas', imagem: './images/roupas.jpg', caminho:'/produtos/womens-dresses'},
-    {categoria: 'Tenis', imagem: './images/tenis.jpg', caminho:'/produtos/mens-shoes'},
-]
+import categorias from "../../utilidades/categorias.jsx";
 
 function Home(){
     return(

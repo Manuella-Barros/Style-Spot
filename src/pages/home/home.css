@@ -29,7 +29,8 @@
   display: inline;
   height: 100%;
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 #main_home article .container_categoria_item .container_imagem img:hover {
   transform: scale(1.1);
@@ -68,6 +69,4 @@
   #main_home article .container_categoria_item:nth-child(2n) {
     margin-left: 0px;
   }
-}
-
-/*# sourceMappingURL=home.css.map */
+}/*# sourceMappingURL=home.css.map */

@@ -10,8 +10,8 @@
 .main_listagem .banner img {
   width: min(100%, 1100px);
   height: 380px;
-  object-fit: cover;
-  position: relative;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media (max-width: 500px) {
   .main_listagem .banner img {
@@ -19,10 +19,8 @@
   }
 }
 .main_listagem .banner .filtros {
-  top: 24%;
-  position: absolute;
   display: flex;
-  width: 40%;
+  width: 100%;
   background-color: #1E1E1E;
 }
 @media (max-width: 500px) {
@@ -31,21 +29,35 @@
     width: 100%;
   }
 }
-.main_listagem .banner .filtros p {
+.main_listagem .banner .filtros a {
   width: 100%;
   color: #ffffff;
   font-size: 1.5rem;
-  padding: 3%;
+  padding: 1.5%;
+  text-decoration: none;
+  text-align: center;
 }
-.main_listagem .banner .filtros p:hover {
+.main_listagem .banner .filtros a:hover {
   background-color: #F0F0F0;
   color: #1E1E1E;
   cursor: pointer;
+}
+.main_listagem .banner .filtros .barra_pesquisa {
+  position: relative;
+}
+.main_listagem .banner .filtros .barra_pesquisa i {
+  position: absolute;
+  left: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.main_listagem .banner .filtros .barra_pesquisa input {
+  padding: 20px;
+  padding-inline: 50px;
+  outline: none;
 }
 .main_listagem .container_produto_listagem {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-}
-
-/*# sourceMappingURL=listagem.css.map */
+}/*# sourceMappingURL=listagem.css.map */

@@ -14,14 +14,10 @@ function Navbar(){
             </div>
             <div id="elemento">
                 <Link to={'/'} >Home</Link>
-                <Link to={'/produtos/womens-dresses'}>Roupas</Link>
-                <Link to={'/produtos/womens-jewellery'}>Joias</Link>
-                <Link to={'/produtos/mens-shoes'}>Tenis</Link>
-                <Link to={'/produtos/mens-watches'}>Relogio</Link>                
-            </div>
-            <div className="barra_pesquisa">
-                <input type="search" name="" id="" placeholder="Pesquise o produto"/>
-                <i className="fa-solid fa-magnifying-glass"></i>
+                <Link to={'/produtos/roupas'}>Roupas</Link>
+                <Link to={'/produtos/joalheria'}>Joias</Link>
+                <Link to={'/produtos/tenis'}>Tenis</Link>
+                <Link to={'/produtos/relogios'}>Relogio</Link>
             </div>
         </nav>
     );

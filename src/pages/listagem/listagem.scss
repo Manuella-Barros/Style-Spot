@@ -12,7 +12,6 @@
             width: $largura-total;
             height: $altura-foto;
             object-fit: cover;
-            position: relative;
 
             @media (max-width: 500px) {
                 width: 100%;
@@ -20,10 +19,9 @@
         }
         
         .filtros{
-            top: 24%;
-            position: absolute;
             display: flex;
-            width: 40%;
+            //width: 50%;
+            width: 100%;
             background-color: $cor-1;
 
             @media (max-width: 500px){
@@ -31,16 +29,34 @@
                 width: 100%;
             }
        
-            p{
+            a{
                 width: 100%;
                 color: $cor-4;
                 font-size: $font-tamanho-p;
-                padding: $esp-p;
+                padding: $esp-pp;
+                text-decoration: none;
+                text-align: center;
             }
-            p:hover{
+            a:hover{
                 background-color: $cor-3;
                 color: $cor-1;
                 cursor: pointer;
+            }
+
+            .barra_pesquisa{
+                position: relative; //para que a=o absolute funcione aqui 
+        
+                i{
+                    position: absolute; //solto em relação a barra de pesquisa
+                    left: 5px;
+                    top: 50%;
+                    transform:translateY(-50%); //Arrasta
+                }
+                input{
+                    padding: 20px;
+                    padding-inline: 50px;
+                    outline: none;
+                }
             }
         }
     }

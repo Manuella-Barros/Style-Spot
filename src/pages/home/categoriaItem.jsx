@@ -8,8 +8,8 @@ function CategoriaItem({valores}){ // aqui ta passando os valores das categorias
                 <img src={valores.imagem} alt="" />
             </div>
             <div className="item_info">
-                <p>{valores.categoria}</p>
-                <Link to={valores.caminho}>Ver mais</Link>                
+                <p>{valores.nome}</p>
+                <Link to={valores.caminho}>Ver mais</Link>
             </div>
         </div>
         

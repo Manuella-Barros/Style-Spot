@@ -8,7 +8,8 @@ import Carregando from "../../componentes/carregando/carregando";
 function Produto(){
     const parametro = useParams();
     const URLInfo = useLocation();
-    const search = new URLSearchParams(URLInfo.search) // transforma em um objeto manipulável
+    const search = new URLSearchParams(URLInfo.search) // transforma em um objeto manipulável, pega os valores do search
+    // console.log(parametro)
 
     const [produto1, setProduto1] = useState(null);
 

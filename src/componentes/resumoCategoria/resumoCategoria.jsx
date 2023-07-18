@@ -6,17 +6,21 @@ import { Link } from "react-router-dom";
 import '../carregando/carregando'
 import Carregando from "../carregando/carregando";
 
-const categorias = {
-    "womens-dresses": "Roupas Femininas", 
-    "womens-jewellery": "Joias Femininas", 
-    "mens-watches": "Relógios",
-    "mens-shoes": "Sapatos"
+const categorias = {// categoria = Nome, url
+    "womens-dresses": ["Roupas Femininas","roupas"], 
+    "mens-shirts": ["Roupas Femininas","roupas"], 
+    "womens-jewellery": ["Joias Femininas", "joalheria"], 
+    "mens-watches": ["Relógios", "relogios"],
+    "womens-watches": ["Relógios", "relogios"],
+    "mens-shoes": ["Sapatos", "tenis"],
+    "womens-shoes": ["Sapatos", "tenis"]
 }
 
 function ResumoCategorias({categoria}){ //categoria = womans-dresses
     const [produtos, setProdutos] = React.useState(null)
 
-    React.useEffect(()=>{ getItem(categoria).then((resposta) => {
+    React.useEffect(()=>{
+        getItem(categoria).then((resposta) => {
             setProdutos(resposta)
         })
     }, []);
@@ -24,7 +28,7 @@ function ResumoCategorias({categoria}){ //categoria = womans-dresses
     return produtos !== null ?(
         <div className="resumo_categorias">
             <div className="container_titulo">
-                <h2>{categorias[categoria]}</h2>                
+                <h2>{categorias[categoria][0]}</h2>                
             </div>
 
             <section className="container_produto_resumo">
@@ -34,7 +38,7 @@ function ResumoCategorias({categoria}){ //categoria = womans-dresses
             </section>
             
             <div className="ver_mais">
-                <Link to = {`/produtos/${categoria}`} >Ver mais</Link>
+                <Link to = {`/produtos/${categorias[categoria][1]}`} >Ver mais</Link>
             </div>
         </div>
     ) : <Carregando/>;
