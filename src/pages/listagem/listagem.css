@@ -1,8 +1,3 @@
-@media (max-width: 500px) {
-  .main_listagem {
-    width: 100%;
-  }
-}
 .main_listagem .banner {
   margin-bottom: 50px;
   max-width: 100%;
@@ -23,19 +18,18 @@
   width: 100%;
   background-color: #1E1E1E;
 }
-@media (max-width: 500px) {
-  .main_listagem .banner .filtros {
-    top: 11%;
-    width: 100%;
-  }
+.main_listagem .banner .filtros div:first-child {
+  width: 90%;
+  display: flex;
+  align-items: center;
 }
 .main_listagem .banner .filtros a {
   width: 100%;
   color: #ffffff;
   font-size: 1.5rem;
-  padding: 1.5%;
-  text-decoration: none;
+  padding: 1.12rem;
   text-align: center;
+  text-decoration: none;
 }
 .main_listagem .banner .filtros a:hover {
   background-color: #F0F0F0;
@@ -52,6 +46,7 @@
   transform: translateY(-50%);
 }
 .main_listagem .banner .filtros .barra_pesquisa input {
+  width: 100%;
   padding: 20px;
   padding-inline: 50px;
   outline: none;
@@ -60,4 +55,20 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+
+@media (max-width: 500px) {
+  .main_listagem {
+    width: 88%;
+  }
+  .main_listagem .banner .filtros {
+    flex-direction: column;
+  }
+  .main_listagem .banner .filtros div:first-child {
+    width: 100%;
+  }
+  .main_listagem .banner .filtros .barra_pesquisa input {
+    padding-inline: 2rem;
+    padding-block: 1rem;
+  }
 }/*# sourceMappingURL=listagem.css.map */

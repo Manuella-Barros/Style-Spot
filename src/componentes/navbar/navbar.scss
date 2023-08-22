@@ -8,12 +8,7 @@ nav{
     justify-content: space-between; // alinha horizontalmente
     align-items: center; //alinha verticalmente
 
-    @media (max-width: 500px){
-        display: none;
-    }
-
     a{ // O componente Link retorna a
-        text-decoration: none;
         color: $cor-3;
         padding: $esp-p;
         font-size: $font-tamanho-pp;
@@ -31,5 +26,68 @@ nav{
     #elemento{
         display: flex;
         justify-content: center;
+    }
+
+    .mobile-menu-icon {
+        display: none;
+    }
+}
+
+@media (min-width: 501px){
+    .mobile-menu-open,
+    .mobile-menu-closed {
+        display: none;
+    }
+}
+
+@media (max-width: 500px) {
+    a{
+        font-size: 1.2rem;
+    }
+    nav{
+        width: 88vw;
+        padding-block: $esp-pp;
+        
+        :first-child{
+            width: 90%;
+        }
+
+        a {
+            padding-inline: $esp-m;
+            height: 100%;
+        }
+
+        #elemento {
+            display: none;
+        }
+
+        .mobile-menu-icon {
+            width: 10%;
+            display: flex;
+
+            button{
+                color: $cor-4;
+                font-size: $font-tamanho-pp;
+                padding-block: $esp-xxg;
+            }
+        }
+    }
+
+    .mobile-menu-open{
+        margin: $esp-pp auto;
+        margin-top: 0px;
+        width: 88vw;
+        background-color: $cor-1;
+        padding-inline: 2rem;
+        
+        a{
+            color: $cor-4;
+            text-align: center;
+            display: flex;
+            padding-block: 0.5rem;
+        }
+    }
+    .mobile-menu-closed {
+        display: none;
     }
 }

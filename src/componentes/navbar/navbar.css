@@ -6,13 +6,7 @@ nav {
   justify-content: space-between;
   align-items: center;
 }
-@media (max-width: 500px) {
-  nav {
-    display: none;
-  }
-}
 nav a {
-  text-decoration: none;
   color: #F0F0F0;
   padding: 3%;
   font-size: 1.3rem;
@@ -27,4 +21,58 @@ nav div {
 nav #elemento {
   display: flex;
   justify-content: center;
+}
+nav .mobile-menu-icon {
+  display: none;
+}
+
+@media (min-width: 501px) {
+  .mobile-menu-open,
+  .mobile-menu-closed {
+    display: none;
+  }
+}
+@media (max-width: 500px) {
+  a {
+    font-size: 1.2rem;
+  }
+  nav {
+    width: 88vw;
+    padding-block: 1.5%;
+  }
+  nav :first-child {
+    width: 90%;
+  }
+  nav a {
+    padding-inline: 5%;
+    height: 100%;
+  }
+  nav #elemento {
+    display: none;
+  }
+  nav .mobile-menu-icon {
+    width: 10%;
+    display: flex;
+  }
+  nav .mobile-menu-icon button {
+    color: #ffffff;
+    font-size: 1.3rem;
+    padding-block: 15%;
+  }
+  .mobile-menu-open {
+    margin: 1.5% auto;
+    margin-top: 0px;
+    width: 88vw;
+    background-color: #1E1E1E;
+    padding-inline: 2rem;
+  }
+  .mobile-menu-open a {
+    color: #ffffff;
+    text-align: center;
+    display: flex;
+    padding-block: 0.5rem;
+  }
+  .mobile-menu-closed {
+    display: none;
+  }
 }/*# sourceMappingURL=navbar.css.map */

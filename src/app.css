@@ -22,6 +22,15 @@ main {
   font-size: 2rem;
 }
 
+button {
+  background-color: transparent;
+  border: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
 :root {
   font-size: 14.5px;
 }

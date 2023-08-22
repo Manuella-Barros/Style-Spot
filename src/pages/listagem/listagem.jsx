@@ -20,12 +20,6 @@ const nomes = {
     'tenis': ['mens-shoes', 'womens-shoes']
 }
 
-// const filtros = [ // Informações do filtro
-//     {'roupas': ["Masculino", "Feminino", "Caro", "Barato", "mens-shirts", "womens-dresses", "", ""]},
-//     {'joalheria': ["Oculos", "Joias", "Caro", "Barato", "sunglasses", "joia", "", ""]},
-//     {'relogios': ["Masculino", "Feminino", "Caro", "Barato", "mens-watches", "womens-watches", "", ""]},
-//     {'tenis': ["Masculino", "Feminino", "Caro", "Barato", "mens-shoes", "womens-shoes", "", ""]},
-// ]
 
 async function getNome(nomes){
     let itens = [], resposta;
@@ -79,12 +73,15 @@ function Listagem(){
             <div className="banner">
                 <img src={imagensBanner[parametros.categoria]} alt="" />
                 <div className="filtros"> 
-                    <Filtros setFiltro={setFiltro} filtro={filtro}/>
+                    <div>
+                        <Filtros setFiltro={setFiltro} filtro={filtro}/>
+                    </div>
+
                     <div className="barra_pesquisa">
                         <input onChange={pesquisar} type="search" placeholder="Pesquise o produto"/>
                         <i className="fa-solid fa-magnifying-glass"></i>
+                    </div>
                 </div>
-            </div>
             </div>
             <div key={1} className="container_produto_listagem">
                 {

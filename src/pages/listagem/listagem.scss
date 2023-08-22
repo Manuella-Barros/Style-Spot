@@ -1,9 +1,6 @@
 @use '../../config' as *;
 
 .main_listagem{
-    @media (max-width: 500px){
-        width: 100%;
-    }
     .banner{
         margin-bottom: 50px;
         max-width: 100%;
@@ -20,22 +17,23 @@
         
         .filtros{
             display: flex;
-            //width: 50%;
             width: 100%;
             background-color: $cor-1;
 
-            @media (max-width: 500px){
-                top: 11%;
-                width: 100%;
+            div:first-child{
+                width: 90%;
+                display: flex;
+                align-items: center;
             }
+
        
             a{
                 width: 100%;
                 color: $cor-4;
                 font-size: $font-tamanho-p;
-                padding: $esp-pp;
-                text-decoration: none;
+                padding: 1.12rem;
                 text-align: center;
+                text-decoration: none;
             }
             a:hover{
                 background-color: $cor-3;
@@ -53,6 +51,7 @@
                     transform:translateY(-50%); //Arrasta
                 }
                 input{
+                    width: 100%;
                     padding: 20px;
                     padding-inline: 50px;
                     outline: none;
@@ -65,5 +64,28 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+    }
+}
+
+@media (max-width: 500px) {
+    .main_listagem{
+        width: 88%;
+
+        .banner{
+            .filtros{
+                flex-direction: column;
+
+                div:first-child{
+                    width: 100%;
+                }
+                
+                .barra_pesquisa{
+                    input {
+                        padding-inline: 2rem;
+                        padding-block: 1rem;
+                    }
+                }
+            }
+        }
     }
 }
