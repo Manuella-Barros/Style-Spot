@@ -7,16 +7,27 @@ import Listagem from "../../pages/listagem/listagem";
 
 // reloadDocument => recarrega a pagina ao clicar na tag Link
 function Navbar(){
-    let menu;
+    let menu, menuIcon;
     
-    function HandleMenuClick() {
+    function HandleMenuClick(e) {
+        const btn = e.target
+
+        // Icone abre e fecha
+        if (btn.classList.contains("iconNormal")){
+            btn.classList.toggle("iconRotate");
+            btn.classList.toggle("iconNormal");
+        } else{
+            btn.classList.toggle("iconRotate");
+            btn.classList.toggle("iconNormal");
+        }
+
+        // Menu abre e fecha
         menu = document.getElementById("mobile-menu");
+        menuIcon = document.getElementById("mobile-menu-icon");
 
         if (menu.classList.contains('mobile-menu-closed')) {
-            console.log('abriu')
             menu.classList.replace("mobile-menu-closed", "mobile-menu-open");
         } else {
-            console.log("fechou");
             menu.classList.replace("mobile-menu-open", "mobile-menu-closed");
         }
     }
@@ -28,9 +39,9 @@ function Navbar(){
                     <Link to="/">Style Spot</Link>
                 </div>
 
-                <div className="mobile-menu-icon">
+                <div id="mobile-menu-icon">
                     <button onClick={HandleMenuClick}>
-                        <i className="fa-solid fa-bars"></i>
+                        <i className="fa-solid fa-bars iconNormal"></i>
                     </button>
                 </div>
 

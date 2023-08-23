@@ -28,7 +28,7 @@ nav{
         justify-content: center;
     }
 
-    .mobile-menu-icon {
+    #mobile-menu-icon {
         display: none;
     }
 }
@@ -61,7 +61,7 @@ nav{
             display: none;
         }
 
-        .mobile-menu-icon {
+        #mobile-menu-icon {
             width: 10%;
             display: flex;
 
@@ -69,7 +69,15 @@ nav{
                 color: $cor-4;
                 font-size: $font-tamanho-pp;
                 padding-block: $esp-xxg;
+                transition: 0.5s;
             }
+        }
+
+        .iconRotate {
+            animation: iconRotate 0.5s forwards;
+        }
+        .iconNormal{
+            animation: iconNormal 0.5s reverse;
         }
     }
 
@@ -89,5 +97,16 @@ nav{
     }
     .mobile-menu-closed {
         display: none;
+    }
+}
+
+@keyframes iconRotate {
+    100% {
+        transform: rotate(-90deg);
+    }
+}
+@keyframes iconNormal {
+    100% {
+        transform: rotate(-90deg);
     }
 }

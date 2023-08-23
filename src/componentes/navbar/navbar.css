@@ -22,7 +22,7 @@ nav #elemento {
   display: flex;
   justify-content: center;
 }
-nav .mobile-menu-icon {
+nav #mobile-menu-icon {
   display: none;
 }
 
@@ -50,14 +50,21 @@ nav .mobile-menu-icon {
   nav #elemento {
     display: none;
   }
-  nav .mobile-menu-icon {
+  nav #mobile-menu-icon {
     width: 10%;
     display: flex;
   }
-  nav .mobile-menu-icon button {
+  nav #mobile-menu-icon button {
     color: #ffffff;
     font-size: 1.3rem;
     padding-block: 15%;
+    transition: 0.5s;
+  }
+  nav .iconRotate {
+    animation: iconRotate 0.5s forwards;
+  }
+  nav .iconNormal {
+    animation: iconNormal 0.5s reverse;
   }
   .mobile-menu-open {
     margin: 1.5% auto;
@@ -74,5 +81,15 @@ nav .mobile-menu-icon {
   }
   .mobile-menu-closed {
     display: none;
+  }
+}
+@keyframes iconRotate {
+  100% {
+    transform: rotate(-90deg);
+  }
+}
+@keyframes iconNormal {
+  100% {
+    transform: rotate(-90deg);
   }
 }/*# sourceMappingURL=navbar.css.map */
